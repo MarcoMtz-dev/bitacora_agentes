@@ -1,0 +1,82 @@
+<input id="nombre_tabla_bd" type="hidden" value="bitacora_bancoppel_codigos_vcas">
+
+<div class="card">
+
+    <div class="card-header">
+        <span>Información de cliente</span>
+    </div>
+
+    <div class="card-body input-group">
+
+        <label class="input-container">
+            <input-counter maxlength="100" textLabel="Nombre del cliente" placeholder="Nombre del cliente"
+                data-dbname="nombre_cliente" onlyLetters required></input-counter>
+        </label>
+
+        <label class="input-container">
+            <input-counter maxlength="12" textLabel="Número de Cliente" placeholder="Número de Cliente" data-dbname="numero_cliente" onlyNumbers required></input-counter>
+        </label>
+
+        <label class="input-container">
+            <input-counter maxlength="10" textLabel="Número Celular" placeholder="Número Celular" type="tel" data-dbname="numero_celular" required></input-counter>
+        </label>
+
+        <label class="input-container">
+            <span>Correo Electrónico</span>
+            <input type="email" emailList placeholder="Correo Electrónico" data-dbname="correo_electronico" required>
+        </label>
+
+    </div>
+
+</div>
+
+<div class="card">
+
+    <div class="card-header">
+        <span>Información Dispositivo</span>
+    </div>
+
+    <div class="card-body input-group">
+
+        <label class="input-container">
+            <input-counter maxlength="50" textLabel="Marca del dispositivo móvil"
+                placeholder="Marca del dispositivo móvil" data-dbname="marca_dispositivo_movil"
+                required></input-counter>
+        </label>
+
+        <label class="input-container">
+            <input-counter maxlength="50" textLabel="Modelo de dispositivo móvil" placeholder="Modelo de dispositivo móvil" data-dbname="modelo_dispositivo_movil" required></input-counter>
+        </label>
+
+        <label class="input-container">
+            <input-counter maxlength="50" textLabel="Sistema operativo" placeholder="Sistema operativo" data-dbname="sistema_operativo" required></input-counter>
+        </label>
+
+        <label class="input-container">
+            <span>Versión del sistema operativo</span>
+            <input type="text" placeholder="Versión del sistema operativo" data-dbname="version_so">
+        </label>
+
+        <label class="input-container">
+            <input-counter maxlength="20" textLabel="Version de la aplicación" placeholder="Version de la aplicación" data-dbname="version_app" required></input-counter>
+        </label>
+
+    </div>
+
+</div>
+
+<div class="card">
+
+    <div class="card-header">
+        <span>Información sobre Queja</span>
+    </div>
+
+    <div class="card-body input-group">
+
+        <label class="input-container">
+            <textarea-counter maxlength="1500" textLabel="Situación detallada" placeholder="Situación detallada" data-dbname="descripcion_queja" required></textarea-counter>
+        </label>
+
+    </div>
+
+</div>

@@ -1,0 +1,39 @@
+<div class="card" data-cardbo>
+    <input type="hidden" data-dbname="folio_uuid">
+
+    <div class="card-header">
+        <span>Información BackOffice</span>
+    </div>
+    
+    <div class="card-body input-group">
+
+        <label class="input-container">
+            <span>ESTATUS BO CAT</span>
+            <select data-dbname="estatus_bo_cat" data-fillwithdb="estatus_bo_cat" disabled>
+                <option value="" selected disabled>SELECCIONE</option>
+            </select>
+        </label>
+        
+        <label class="input-container">
+            <span>FECHA ESCALAMIENTO</span>
+            <input type="date" data-dbname="fecha_escalamiento" disabled>
+        </label>
+
+
+        <label class="input-container">
+            <textarea-counter maxlength="1500" textLabel="RESOLUCIÓN DEL BANCO" placeholder="RESOLUCIÓN DEL BANCO" data-dbname="resolucion_banco" disabled></textarea-counter>
+        </label>
+
+        <label class="input-container">
+            <span>FECHA RESOLUCIÓN BANCO</span>
+            <input type="date" data-dbname="fecha_resolucion" disabled>
+        </label>
+
+        <label class="input-container">
+            <span>DIAS DILACIÓN</span>
+            <input type="text" data-dbname="dias_dilacion" placeholder="Dias Dilación" onlyNumbers disabled>
+        </label>
+
+    </div>
+
+</div>

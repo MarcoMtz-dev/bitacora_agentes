@@ -1,0 +1,43 @@
+<div class="card" data-cardbo>
+    <input type="hidden" data-dbname="folio_uuid">
+
+    <div class="card-header">
+        <span>Información BackOffice</span>
+    </div>
+
+    <div class="card-body input-group">
+
+        <label class="input-container">
+            <textarea-counter maxlength="1500" textLabel="COMENTARIOS DE SISTEMAS" placeholder="COMENTARIOS DE SISTEMAS" data-dbname="comentarios_sistemas" disabled></textarea-counter>
+        </label>
+
+        <label class="input-container">
+            <input-counter maxlength="50" textLabel="TICKET DE JIRA" placeholder="TICKET DE JIRA" data-dbname="ticket_jira" disabled></input-counter>
+        </label>
+
+        <label class="input-container">
+            <textarea-counter maxlength="100" textLabel="RESPONSABLE DE SISTEMAS" placeholder="RESPONSABLE DE SISTEMAS" data-dbname="responsable_sistemas" disabled></textarea-counter>
+        </label>
+
+        <label class="input-container">
+            <span>ESTATUS DE LA INCIDENCIA</span>
+            <select data-dbname="estatus_incidencia" disabled>
+                <option value="" selected disabled>SELECCIONE</option>
+                <option value="SIN ATENDER">SIN ATENDER</option>
+                <option value="EN PROCESO">EN PROCESO</option>
+                <option value="RESUELTO">RESUELTO</option>
+            </select>
+        </label>
+
+        <label class="input-container">
+            <span>FECHA TENTATIVA DE SOLUCIÓN / LIBERACIÓN / REALEASE</span>
+            <input type="date" data-dbname="fecha_tentativa_solucion" disabled>
+        </label>
+
+        <label class="input-container">
+            <textarea-counter maxlength="100" textLabel="ACCIÓN QUE DEBE REALIZAR EL CLIENTE PARA SOLUCIONAR EL ERROR" placeholder="ACCIÓN QUE DEBE REALIZAR EL CLIENTE PARA SOLUCIONAR EL ERROR" data-dbname="accion_realizar" required disabled></textarea-counter>
+        </label>
+
+    </div>
+
+</div>

@@ -1,0 +1,92 @@
+<input id="nombre_tabla_bd" type="hidden" value="bitacora_bancoppel_tdc_oro_no_sucursal">
+
+<div class="card">
+
+    <div class="card-header">
+        <span>Información de cliente</span>
+    </div>
+
+    <div class="card-body input-group">
+
+        <label class="input-container">
+            <input-counter maxlength="12" textLabel="Número de Cliente" placeholder="Número de Cliente" data-dbname="numero_cliente" onlyNumbers required></input-counter>
+        </label>
+
+        <label class="input-container">
+            <input-counter maxlength="100" textLabel="Nombre del cliente" placeholder="Nombre del cliente"
+                data-dbname="nombre_cliente" onlyLetters required></input-counter>
+        </label>
+
+        <label class="input-container">
+            <span>Fecha de nacimiento</span>
+            <input type="date" data-dbname="fecha_nacimiento" required>
+        </label>
+
+        <label class="input-container">
+            <input-counter maxlength="10" textLabel="Teléfono" placeholder="Teléfono" type="tel" data-dbname="telefono" required></input-counter>
+        </label>
+
+        <label class="input-container">
+            <span>Correo Registrado</span>
+            <input type="email" emailList placeholder="Correo Registrado" data-dbname="correo_electronico" required>
+        </label>
+
+    </div>
+
+</div>
+
+<div class="card">
+
+    <div class="card-header">
+        <span>Información Tarjeta</span>
+    </div>
+
+    <div class="card-body input-group">
+
+        <label class="input-container">
+            <span>Tipo de tarjeta</span>
+            <!-- <select required data-fillwithdb="tipo_tarjeta" data-dbname="tipo_tarjeta"></select> -->
+            <select data-dbname="tipo_tarjeta" disabled required>
+                <option value="TDC" selected>TDC</option>
+            </select>
+        </label>
+
+        <label class="input-container">
+            <input-counter maxlength="4" textLabel="4 últimos digitos tarjeta clasica"
+                placeholder="4 últimos digitos tarjeta clasica" data-dbname="ultimos_cuatro_tarjeta_clasica" onlyNumbers
+                required></input-counter>
+        </label>
+
+    </div>
+
+</div>
+
+<div class="card">
+
+    <div class="card-header">
+        <span>Información sobre Queja</span>
+    </div>
+
+    <div class="card-body input-group">
+
+        <label class="input-container">
+            <span>Fecha de solicitud</span>
+            <input type="date" data-dbname="fecha_solicitud" required>
+        </label>
+
+        <label class="input-container">
+            <span>No. Sucursal</span>
+            <input id="inputNumSucursal" type="sucursales_coppel" placeholder="No. Sucursal" data-dbname="num_sucursal">
+        </label>
+
+        <label class="input-container">
+            <input-counter id="inputNombreSucursal" maxlength="100" textLabel="Nombre Sucursal" placeholder="Nombre Sucursal" data-dbname="nombre_sucursal" disabled></input-counter>
+        </label>
+
+        <label class="input-container">
+            <textarea-counter maxlength="1500" textLabel="Situación detallada" placeholder="Situación detallada" data-dbname="descripcion_queja" required></textarea-counter>
+        </label>
+        
+    </div>
+
+</div>

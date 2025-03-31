@@ -1,0 +1,126 @@
+<input id="nombre_tabla_bd" type="hidden" value="bitacora_bancoppel_errores_generados">
+
+<div class="card">
+
+    <div class="card-header">
+        <span>Información de cliente</span>
+    </div>
+
+    <div class="card-body input-group">
+
+        <label class="input-container">
+            <input-counter maxlength="12" textLabel="Número de Cliente" placeholder="Número de Cliente" data-dbname="numero_cliente" onlyNumbers required></input-counter>
+        </label>
+
+        <label class="input-container">
+            <input-counter maxlength="100" textLabel="Nombre del cliente" placeholder="Nombre del cliente"
+                data-dbname="nombre_cliente" onlyLetters required></input-counter>
+        </label>
+
+        <label class="input-container">
+            <span>Fecha de nacimiento</span>
+            <input type="date" data-dbname="fecha_nacimiento" required>
+        </label>
+
+        <label class="input-container">
+            <input-counter maxlength="10" textLabel="Teléfono" placeholder="Teléfono" type="tel" data-dbname="telefono" required></input-counter>
+        </label>
+
+        <label class="input-container">
+            <span>Correo Electrónico</span>
+            <input type="email" emailList placeholder="Correo Electrónico" data-dbname="correo_electronico" required>
+        </label>
+
+    </div>
+
+</div>
+
+<div class="card">
+
+    <div class="card-header">
+        <span>Información Tarjeta</span>
+    </div>
+
+    <div class="card-body input-group">
+
+        <label class="input-container">
+            <input-counter maxlength="4" textLabel="4 últimos digitos de la cuenta"
+                placeholder="4 últimos digitos de la cuenta" data-dbname="ultimos_cuatro_cuenta" onlyNumbers
+                required></input-counter>
+        </label>
+
+        <label class="input-container">
+            <input-counter maxlength="4" textLabel="4 últimos digitos de la tarjeta"
+                placeholder="4 últimos digitos de la tarjeta" data-dbname="ultimos_cuatro_tarjeta" onlyNumbers
+                required></input-counter>
+        </label>
+
+        <label class="input-container">
+            <span>Tipo tarjeta</span>
+            <!-- <input type="text" placeholder="Tipo tarjeta" value="TDC" disabled required> -->
+            <select required data-fillwithdb="tipo_tarjeta" data-dbname="tipo_tarjeta"></select>
+        </label>
+
+    </div>
+
+</div>
+
+<div class="card">
+
+    <div class="card-header">
+        <span>Información sobre Queja</span>
+    </div>
+
+    <div class="card-body input-group">
+
+        <label class="input-container">
+            <input-counter maxlength="50" textLabel="Evento" placeholder="Evento" data-dbname="evento"
+                required></input-counter>
+        </label>
+
+        <label class="input-container">
+            <textarea-counter maxlength="100" textLabel="Origen" placeholder="Origen" data-dbname="origen"
+                required></textarea-counter>
+        </label>
+
+        <label class="input-container">
+            <span>Fecha transacción</span>
+            <input type="date" data-dbname="fecha_transaccion">
+        </label>
+
+        <label class="input-container">
+            <span>Hora transacción</span>
+            <input type="time" data-dbname="hora_transacción">
+        </label>
+
+        <label class="input-container">
+            <span>Monto transacción</span>
+            <input type="money" placeholder="Monto transacción" data-dbname="monto_transaccion" required>
+        </label>
+
+        <label class="input-container">
+            <textarea-counter maxlength="100" textLabel="Tipo de error" placeholder="Tipo de error"
+                data-dbname="tipo_error" required></textarea-counter>
+        </label>
+
+        <label class="input-container">
+            <span>¿Es la primera vez que se comunica?</span>
+            <select data-dbname="primera_vez" required>
+                <option value="" selected disabled>SELECCIONE</option>
+                <option value="SI">SI</option>
+                <option value="NO">NO</option>
+            </select>
+        </label>
+
+        <label class="input-container">
+            <span>Última fecha en la que se comunicó</span>
+            <input type="date" data-dbname="ultima_fecha_comunico">
+        </label>
+
+        <label class="input-container">
+            <textarea-counter maxlength="1500" textLabel="Situación detallada" placeholder="Situación detallada" data-dbname="descripcion_queja" required></textarea-counter>
+        </label>
+
+    </div>
+
+</div>

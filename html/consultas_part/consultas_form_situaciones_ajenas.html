@@ -1,0 +1,41 @@
+<div class="card" data-cardbo>
+    <input type="hidden" data-dbname="folio_uuid">
+
+    <div class="card-header">
+        <span>Información BackOffice</span>
+    </div>
+    
+    <div class="card-body input-group">
+
+        <label class="input-container">
+            <span>ESTATUS BO CAT</span>
+            <select data-dbname="estatus_bo_cat" data-fillwithdb="estatus_bo_cat" disabled>
+                <option value="" selected disabled>SELECCIONE</option>
+            </select>
+        </label>
+
+        <label class="input-container">
+            <textarea-counter maxlength="1500" textLabel="OBSERVACIONES BO" placeholder="OBSERVACIONES BO" data-dbname="observaciones_bo" required disabled></textarea-counter>
+        </label>
+
+        <label class="input-container">
+            <textarea-counter maxlength="1500" textLabel="RESPUESTA DEL RESPONSABLE DEL ÁREA" placeholder="RESPUESTA DEL RESPONSABLE DEL ÁREA" data-dbname="respuesta_responsable" disabled></textarea-counter>
+        </label>
+
+        <label class="input-container">
+            <input-counter maxlength="10" textLabel="FOLIO" placeholder="FOLIO" data-dbname="folio" disabled></input-counter>
+        </label>
+
+        <label class="input-container">
+            <span>FECHA DE NOTIFICACIÓN A CTE</span>
+            <input type="date" data-dbname="fecha_notificacion_cliente" disabled>
+        </label>
+
+        <label class="input-container">
+            <span>FECHA ANÁLISIS/CORTE</span>
+            <input data-dbname="fecha_analisis" type="date" disabled>
+        </label>
+
+    </div>
+
+</div>

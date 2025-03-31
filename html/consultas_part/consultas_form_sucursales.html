@@ -1,0 +1,41 @@
+<div class="card" data-cardbo>
+    <input type="hidden" data-dbname="folio_uuid">
+
+    <div class="card-header">
+        <span>Información BackOffice</span>
+    </div>
+    
+    <div class="card-body input-group">
+
+        <label class="input-container">
+            <input-counter maxlength="50" textLabel="SUB-ETIQUETA" placeholder="SUB-ETIQUETA" list="dtlistNegacion" data-dbname="sub_etiqueta" disabled></input-counter>
+            <datalist id="dtlistNegacion">
+                <option value="NEGACION DE ACLARACION"></option>
+            </datalist>
+        </label>
+
+        <label class="input-container">
+            <span>CATEGORÍA</span>
+            <select id="categoria" data-dbname="categoria" data-fillwithdb="categoria" required disabled>
+                <option value="" selected disabled>SELECCIONE</option>
+            </select>
+        </label>
+
+        <label class="input-container">
+            <span>Subcategoría</span>
+            <select data-dbname="subcategoria" data-fillwithelem="categoria" required disabled>
+                <option value="" selected disabled>SELECCIONE</option>
+            </select>
+        </label>
+
+        <label class="input-container">
+            <textarea-counter maxlength="1500" textLabel="RESPUESTA DEL RESPONSABLE DEL ÁREA" placeholder="RESPUESTA DEL RESPONSABLE DEL ÁREA" data-dbname="respuesta_responsable" required disabled></textarea-counter>
+        </label>
+
+        <label class="input-container">
+            <input-counter maxlength="10" textLabel="FOLIO" placeholder="FOLIO" data-dbname="folio" disabled></input-counter>
+        </label>
+
+    </div>
+
+</div>

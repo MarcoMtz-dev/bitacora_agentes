@@ -1,0 +1,73 @@
+<input id="nombre_tabla_bd" type="hidden" value="bitacora_bancoppel_anticipo_nomina">
+
+<div class="card">
+
+    <div class="card-header">
+        <span>Información de cliente</span>
+    </div>
+
+    <div class="card-body input-group">
+
+        <label class="input-container">
+            <input-counter maxlength="12" textLabel="Número de Cliente" placeholder="Número de Cliente" data-dbname="numero_cliente" onlyNumbers required></input-counter>
+        </label>
+
+        <label class="input-container">
+            <input-counter maxlength="100" textLabel="Nombre del cliente" placeholder="Nombre del cliente"
+                data-dbname="nombre_cliente" onlyLetters required></input-counter>
+        </label>
+
+        <label class="input-container">
+            <input-counter maxlength="10" textLabel="Teléfono" placeholder="Teléfono" type="tel" data-dbname="numero_celular" required></input-counter>
+        </label>
+
+    </div>
+
+</div>
+
+<div class="card">
+
+    <div class="card-header">
+        <span>Información Sobre Queja</span>
+    </div>
+
+    <div class="card-body input-group">
+
+        <label class="input-container">
+            <input-counter maxlength="50" textLabel="No. Anticipo" placeholder="No. Anticipo" data-dbname="num_anticipo"
+                onlyNumbers required></input-counter>
+        </label>
+
+        <label class="input-container">
+            <input-counter maxlength="50" textLabel="Compañía" placeholder="Compañía" data-dbname="compania" list="datalistCompania" required></input-counter>
+            <datalist id="datalistCompania">
+                <option value="TELCEL"></option>
+                <option value="MOVISTAR"></option>
+                <option value="AT&T"></option>
+                <option value="UNEFON"></option>
+                <option value="BAIT"></option>
+            </datalist>
+        </label>
+
+        <label class="input-container">
+            <span>Fecha de inicio de la incidencia</span>
+            <input type="date" data-dbname="fecha_incidencia" required>
+        </label>
+
+        <label class="input-container">
+            <span>Última fecha de intento de disposición</span>
+            <input type="date" data-dbname="fecha_ultimo_intento" required>
+        </label>
+
+        <label class="input-container">
+            <span>Hora de solicitud</span>
+            <input type="time" data-dbname="hora_solicitud">
+        </label>
+
+        <label class="input-container">
+            <textarea-counter maxlength="1500" textLabel="Comentarios" placeholder="Comentarios" data-dbname="descripcion_queja" required></textarea-counter>
+        </label>
+
+    </div>
+
+</div>

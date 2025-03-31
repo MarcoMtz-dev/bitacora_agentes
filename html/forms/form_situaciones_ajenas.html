@@ -1,0 +1,140 @@
+<input id="nombre_tabla_bd" type="hidden" value="bitacora_bancoppel_situaciones_ajenas">
+
+<div class="card">
+
+    <div class="card-header">
+        <span>Información de cliente</span>
+    </div>
+
+    <div class="card-body input-group">
+
+        <label class="input-container">
+            <span>¿Es cliente?</span>
+            <select data-dbname="es_cliente" required>
+                <option value="" selected disabled>SELECCIONE</option>
+                <option value="SI">SI</option>
+                <option value="NO">NO</option>
+            </select>
+        </label>
+
+        <label class="input-container">
+            <input-counter maxlength="12" textLabel="Número de Cliente" placeholder="Número de Cliente" data-dbname="numero_cliente" onlyNumbers required></input-counter>
+        </label>
+
+        <label class="input-container">
+            <span>Estado</span>
+            <input type="estado_mexico" placeholder="Estado" data-cityDependence="inputCity" data-dbname="estado"
+                required>
+        </label>
+
+        <label class="input-container">
+            <span>Ciudad</span>
+            <input type="ciudad_mexico" placeholder="Ciudad" id="inputCity" data-cityparent="" data-dbname="ciudad"
+                required>
+        </label>
+
+        <label class="input-container">
+            <span>Fecha de Nacimiento</span>
+            <input type="date" data-dbname="fecha_nacimiento" required>
+        </label>
+
+        <label class="input-container">
+            <input-counter maxlength="100" textLabel="Nombre del Cliente" placeholder="Nombre del Cliente" data-dbname="nombre_cliente" onlyLetters required></input-counter>
+        </label>
+
+        <label class="input-container">
+            <span>Correo Registrado</span>
+            <input type="email" emailList placeholder="Correo Registrado" data-dbname="correo_electronico" required>
+        </label>
+
+        <label class="input-container">
+            <input-counter maxlength="10" type="tel" textLabel="Celular Registrado" placeholder="Celular Registrado" data-dbname="celular_registrado" required></input-counter>
+        </label>
+
+
+    </div>
+
+</div>
+
+<div class="card">
+
+    <div class="card-header">
+        <span>Información sobre Queja</span>
+    </div>
+
+    <div class="card-body input-group">
+
+        <label class="input-container">
+            <span>Producto por el que llaman</span>
+            <select data-dbname="producto_motivo" required>
+                <option value="" selected disabled>SELECCIONE</option>
+                <option value="TDC">TDC</option>
+                <option value="P. PERSONAL">P. PERSONAL</option>
+                <option value="P. DIGITAL">P. DIGITAL</option>
+                <option value="N/A">N/A</option>
+            </select>
+        </label>
+
+        <label class="input-container">
+            <span>Categoría</span>
+            <select id="categoria" data-dbname="categoria" data-fillwithdb="categoria" required>
+                <option value="" selected disabled>SELECCIONE</option>
+            </select>
+        </label>
+
+        <label class="input-container">
+            <span>Subcategoría</span>
+            <select id="subcategoria" data-dbname="subcategoria" data-fillwithelem="categoria" required>
+                <option value="" selected disabled>SELECCIONE</option>
+            </select>
+        </label>
+
+        <label class="input-container">
+            <span>Fecha de la situación</span>
+            <input type="date" data-dbname="fecha_situacion">
+        </label>
+
+        <label class="input-container">
+            <textarea-counter maxlength="1500" textLabel="Descripción de queja"
+                placeholder="Descripción de queja" data-dbname="descripcion_queja" required></textarea-counter>
+        </label>
+
+    </div>
+
+</div>
+
+<div class="card">
+
+    <div class="card-header">
+        <span>Información de pago</span>
+    </div>
+
+    <div class="card-body input-group">
+
+        <label class="input-container">
+            <input-counter maxlength="50" textLabel="Establecimiento de pago" placeholder="Establecimiento de pago" data-dbname="establecimiento_pago"></input-counter>
+        </label>
+
+        <label class="input-container">
+            <span>Fecha de pago</span>
+            <input type="date" data-dbname="fecha_pago">
+        </label>
+
+        <label class="input-container">
+            <span>Medio de pago</span>
+            <select data-dbname="medio_pago">
+                <option value="" selected disabled>SELECCIONE</option>
+                <option value="DEPOSITO">DEPOSITO</option>
+                <option value="TRANSFERENCIA">TRANSFERENCIA</option>
+                <option value="N/A">N/A</option>
+            </select>
+        </label>
+
+        <label class="input-container">
+            <span>Cantidad</span>
+            <input type="money" placeholder="Cantidad" data-dbname="cantidad">
+        </label>
+
+    </div>
+
+</div>

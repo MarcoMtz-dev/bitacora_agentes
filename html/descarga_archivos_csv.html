@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Descargas</title>
+
+    <script src="../js/eventosGenerales.js"></script>
+    <script src="../js/eventosDescargaArchivos.js"></script>
+
+</head>
+
+<body>
+
+    <style>
+        :root {
+
+            --white: #fff;
+            --primary-hover: #3f80c0;
+            --color-principal-background: transparent;
+
+        }
+
+        body[data-bd-dark] {
+            --color-principal-background: #1e2833;
+            --primary-hover: #e59700;
+        }
+
+        *,
+        *::before,
+        *::after {
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+
+        body,
+        html {
+            padding: 0;
+            margin: 0;
+            background-color: var(--color-principal-background);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .titulo {
+            text-align: center;
+            margin: 20px 0;
+            color: var(--white);
+        }
+
+        .container {
+            background-color: var(--primary-hover);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            width: 500PX;
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            top: 100px;
+
+            overflow: hidden;
+        }
+
+        .bitacora-todo,
+        .fecha-inicial {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            margin-bottom: 5px;
+            color: var(--white);
+            font-weight: bold;
+            align-self: start;
+        }
+
+        select,
+        input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: var(--white);
+            color: var(--text-color);
+        }
+
+        .button {
+            line-height: 1;
+            background-color: transparent;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.35em;
+            padding: 0.75em 1em;
+            padding-right: 1.25em;
+            color: #fff;
+            border: 1px solid transparent;
+            font-weight: 700;
+            border-radius: 25px;
+            border: #000;
+            font-size: 1rem;
+            box-shadow: 0 0.7em 1.5em -0.5em #000;
+            transition: transform 0.3s;
+            background: linear-gradient(50deg, var(--primary-hover), #fff 100%);
+        }
+
+        .button__icon {
+            width: 1.8em;
+            height: 1.5em;
+        }
+
+        .button:hover {
+            border-color: #f7f1f1;
+        }
+
+        .button:active {
+            transform: scale(0.98);
+            box-shadow: 0 0.5em 1.5em -0.5em #000000;
+        }
+    </style>
+
+    <form id="formularioDescarga">
+
+        <div class="container">
+            <h1 class="titulo">Descarga de Datos</h1>
+
+            <div class="bitacora-todo">
+                <label for="bitacora">Bitácora:</label>
+                <select name="bitacora" id="bitacora" required>
+                    <option value="">Selecciona una bitácora</option>
+                </select>
+            </div>
+
+            <div class="fecha-inicial">
+                <label for="fecha-inicial">Fecha Inicial:</label>
+                <input type="date" id="fecha-inicial" required>
+                <label for="fecha-final">Fecha Final:</label>
+                <input type="date" id="fecha-final" required>
+            </div>
+
+            <button class="button" id="descargarDatos">
+                <svg stroke-linejoin="round" stroke-linecap="round" fill="none" stroke="currentColor" stroke-width="1.5"
+                    viewBox="0 0 24 24" height="40" width="40" class="button__icon">
+                    <path fill="none" d="M0 0h24v24H0z" stroke="none"></path>
+                    <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"></path>
+                    <path d="M7 11l5 5l5 -5"></path>
+                    <path d="M12 4l0 12"></path>
+                </svg>
+                <span class="button__text">Descargar</span>
+            </button>
+
+        </div>
+
+
+    </form>
+
+</body>
+
+</html>

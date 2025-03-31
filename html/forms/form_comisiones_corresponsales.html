@@ -1,0 +1,101 @@
+<input id="nombre_tabla_bd" type="hidden" value="bitacora_bancoppel_comisiones_y_corresponsales">
+
+<div class="card">
+
+    <div class="card-header">
+        <span>Información de cliente</span>
+    </div>
+
+    <div class="card-body input-group">
+
+        <label class="input-container">
+            <input-counter maxlength="12" textLabel="Número de Cliente" placeholder="Número de Cliente" data-dbname="numero_cliente" onlyNumbers required></input-counter>
+        </label>
+
+        <label class="input-container">
+            <input-counter maxlength="100" textLabel="Nombre del cliente" placeholder="Nombre del cliente"
+                data-dbname="nombre_cliente" onlyLetters required></input-counter>
+        </label>
+
+        <label class="input-container">
+            <span>Fecha de nacimiento</span>
+            <input type="date" data-dbname="fecha_nacimiento" required>
+        </label>
+
+        <label class="input-container">
+            <input-counter maxlength="10" textLabel="Teléfono" placeholder="Teléfono" type="tel" data-dbname="telefono" required></input-counter>
+        </label>
+
+        <label class="input-container">
+            <span>Correo Electrónico</span>
+            <input type="email" emailList placeholder="Correo Electrónico" data-dbname="correo_electronico" required>
+        </label>
+
+    </div>
+
+</div>
+
+
+<div class="card">
+
+    <div class="card-header">
+        <span>Información sobre Queja</span>
+    </div>
+
+    <div class="card-body input-group">
+
+        <label class="input-container">
+            <span>Fecha de situación</span>
+            <input type="date" data-dbname="fecha_situacion">
+        </label>
+
+        <label class="input-container">
+            <span>MOTIVO</span>
+            <select data-dbname="motivo" required>
+                <option value="" selected disabled>SELECCIONE</option>
+                <option value="COMISION">COMISION</option>
+                <option value="CORRESPONSAL">CORRESPONSAL</option>
+                <option value="SEGURO">SEGURO</option>
+                <option value="DOMICILIACIONES">DOMICILIACIONES</option>
+            </select>
+        </label>
+
+        <label class="input-container">
+            <textarea-counter maxlength="50" textLabel="Institución" placeholder="Institución"
+                data-dbname="institucion" required></textarea-counter>
+        </label>
+
+        <label class="input-container">
+            <!-- <textarea-counter maxlength="1500" textLabel="Situacion detallada" placeholder="Situacion detallada" data-dbname="situacion_detallada" required></textarea-counter> -->
+            <textarea-counter maxlength="1500" textLabel="Situación detallada" placeholder="Situación detallada"
+                data-dbname="descripcion_queja" required></textarea-counter>
+        </label>
+        
+    </div>
+
+</div>
+
+
+<div class="card">
+
+    <div class="card-header">
+        <span>Información Adicional</span>
+    </div>
+
+    <div class="card-body input-group">
+
+        <label class="input-container">
+            <input-counter maxlength="50" textLabel="No. Folio" placeholder="No. Folio" data-dbname="adicional_folio" required></input-counter>
+        </label>
+
+        <label class="input-container">
+            <input-counter maxlength="50" textLabel="No. Ticket" placeholder="No. Ticket" data-dbname="adicional_ticket" required></input-counter>
+        </label>
+
+        <label class="input-container">
+            <textarea-counter maxlength="100" textLabel="Otro" placeholder="Otro" data-dbname="adicional_otro" required></textarea-counter>
+        </label>
+
+    </div>
+
+</div>

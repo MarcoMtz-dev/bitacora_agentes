@@ -1,0 +1,97 @@
+<input id="nombre_tabla_bd" type="hidden" value="bitacora_bancoppel_portabilidad_nomina">
+
+<div class="card">
+
+    <div class="card-header">
+        <span>Información de cliente</span>
+    </div>
+
+    <div class="card-body input-group">
+
+        <label class="input-container">
+            <input-counter maxlength="12" textLabel="Número de Cliente" placeholder="Número de Cliente" data-dbname="numero_cliente" onlyNumbers required></input-counter>
+        </label>
+
+        <label class="input-container">
+            <input-counter maxlength="100" textLabel="Nombre del cliente" placeholder="Nombre del cliente"
+                data-dbname="nombre_cliente" onlyLetters required></input-counter>
+        </label>
+
+        <label class="input-container">
+            <span>Fecha de nacimiento</span>
+            <input type="date" data-dbname="fecha_nacimiento" required>
+        </label>
+
+        <label class="input-container">
+            <input-counter maxlength="11" textLabel="Número de cuenta" placeholder="Número de cuenta"
+                data-dbname="numero_cuenta" onlyNumbers required></input-counter>
+        </label>
+
+        <label class="input-container">
+            <input-counter maxlength="10" textLabel="Teléfono" placeholder="Teléfono" type="tel" data-dbname="telefono" required></input-counter>
+        </label>
+
+        <label class="input-container">
+            <span>Correo Electrónico</span>
+            <input type="email" emailList placeholder="Correo Electrónico" data-dbname="correo_electronico" required>
+        </label>
+
+    </div>
+
+</div>
+
+<div class="card">
+
+    <div class="card-header">
+        <span>Información Empresa</span>
+    </div>
+
+    <div class="card-body input-group">
+
+        <label class="input-container">
+            <input-counter maxlength="50" textLabel="Empresa Emisora" placeholder="Empresa Emisora" data-dbname="empresa_emisora" required></input-counter>
+        </label>
+
+        <label class="input-container">
+            <input-counter maxlength="50" textLabel="Banco Emisor" placeholder="Banco Emisor" data-dbname="banco_emisor" required></input-counter>
+        </label>
+
+        <label class="input-container">
+            <span>Fecha de depósito</span>
+            <input type="date" data-dbname="fecha_deposito" required>
+        </label>
+
+        <label class="input-container">
+            <span>Monto del depósito</span>
+            <input type="money" placeholder="Monto del deposito" data-dbname="monto_deposito" required>
+        </label>
+
+    </div>
+
+</div>
+
+<div class="card">
+
+    <div class="card-header">
+        <span>Información sobre Queja</span>
+    </div>
+
+    <div class="card-body input-group">
+
+        <label class="input-container">
+            <span>¿Ha ocurrido en ocasiones anteriores?</span>
+            <select data-dbname="ocurrio_antes" required>
+                <option value="" selected disabled>SELECCIONE</option>
+                <option value="SI">SI</option>
+                <option value="NO">NO</option>
+            </select>
+        </label>
+
+        <label class="input-container">
+            <textarea-counter maxlength="1500" textLabel="Situación detallada" placeholder="Situación detallada"
+                data-dbname="descripcion_queja" required></textarea-counter>
+        </label>
+
+    </div>
+
+</div>

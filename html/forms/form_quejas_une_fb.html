@@ -1,0 +1,132 @@
+<input id="nombre_tabla_bd" type="hidden" value="bitacora_bancoppel_quejas_une_fb">
+
+<div class="card">
+
+    <div class="card-header">
+        <span>Información de cliente</span>
+    </div>
+
+    <div class="card-body input-group">
+
+        <label class="input-container">
+            <span>ES CLIENTE</span>
+            <select data-dbname="es_cliente" required>
+                <option value="" selected disabled>SELECCIONE</option>
+                <option value="SI">SI</option>
+                <option value="NO">NO</option>
+            </select>
+        </label>
+
+        <label class="input-container">
+            <input-counter maxlength="12" textLabel="Número de Cliente" placeholder="Número de Cliente" data-dbname="numero_cliente" onlyNumbers required></input-counter>
+        </label>
+
+        <label class="input-container">
+            <input-counter maxlength="100" textLabel="NOMBRE CLIENTE" placeholder="Nombre del cliente"
+                data-dbname="nombre_cliente" onlyLetters required></input-counter>
+        </label>
+
+        <label class="input-container">
+            <span>Estado</span>
+            <input type="estado_mexico" data-dbname="estado" placeholder="Estado">
+        </label>
+
+        <label class="input-container">
+            <input-counter maxlength="10" type="tel" textLabel="Celular Registrado" placeholder="Celular Registrado" data-dbname="celular_registrado" required></input-counter>
+        </label>
+
+        <label class="input-container">
+            <span>CORREO REGISTRADO</span>
+            <input type="email" emailList textLabel="CORREO REGISTRADO" placeholder="Correo Registrado"
+                data-dbname="correo_electronico" maxlength="50" required>
+        </label>
+
+    </div>
+
+</div>
+
+<div class="card">
+
+    <div class="card-header">
+        <span>Información Tienda</span>
+    </div>
+
+    <div class="card-body input-group">
+
+        <label class="input-container">
+            <span>No. Sucursal</span>
+            <input id="inputNumSucursal" type="sucursales_coppel" maxlength="4" textLabel="No. SUCURSAL"
+                placeholder="No. Sucursal" data-dbname="num_sucursal" onlyNumbers>
+        </label>
+
+        <label class="input-container">
+            <input-counter id="inputNombreSucursal" maxlength="100" textLabel="Nombre sucursal" placeholder="Nombre sucursal" data-dbname="nombre_sucursal" onlyLetters disabled></input-counter>
+        </label>
+
+
+        <label class="input-container">
+            <span>CARGO PERSONAL DE TDA</span>
+            <select data-dbname="cargo_personal_tda" required>
+                <option value="" selected disabled>SELECCIONE</option>
+                <option value="CAJERO">CAJERO</option>
+                <option value="PROMOTOR">PROMOTOR</option>
+                <option value="GERENTE">GERENTE</option>
+                <option value="N/A">N/A</option>
+            </select>
+        </label>
+
+        <label class="input-container">
+            <input-counter maxlength="100" textLabel="NOMBRE DEL PERSONAL DE TIENDA" placeholder="Nombre del personal de tienda" data-dbname="nombre_personal_tda" onlyLetters required></input-counter>
+        </label>
+
+
+    </div>
+
+</div>
+
+<div class="card">
+
+    <div class="card-header">
+        <span>Información sobre Queja</span>
+    </div>
+
+    <div class="card-body input-group">
+
+        <label class="input-container">
+            <textarea-counter maxlength="50" textLabel="Origen de la queja" placeholder="Origen de la queja" data-dbname="origen_queja" required></textarea-counter>
+        </label>
+
+        <label class="input-container">
+            <span>FECHA LLAMADA</span>
+            <input type="date" data-dbname="fecha_llamada" required>
+        </label>
+
+
+        <label class="input-container">
+            <label>FECHA SITUACIÓN</label>
+            <input type="date" data-dbname="fecha_situacion">
+        </label>
+
+
+        <label class="input-container">
+            <textarea-counter maxlength="1500" textLabel="DESCRIPCIÓN DE QUEJA" placeholder="Descripción de queja"
+                data-dbname="descripcion_queja" required></textarea-counter>
+        </label>
+
+        <label class="input-container">
+            <span>CATEGORÍA</span>
+            <select id="categoria" data-dbname="categoria" data-fillwithdb="categoria" required>
+                <option value="" selected disabled>SELECCIONE</option>
+            </select>
+        </label>
+
+        <label class="input-container">
+            <span>SUB-CATEGORÍA</span>
+            <select data-dbname="subcategoria" data-fillwithelem="categoria" required>
+                <option value="" selected disabled>SELECCIONE</option>
+            </select>
+        </label>
+
+    </div>
+
+</div>

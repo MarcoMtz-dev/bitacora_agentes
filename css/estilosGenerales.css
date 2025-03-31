@@ -1,0 +1,361 @@
+:root{
+
+    --color-principal-background: transparent;
+    --color-background-card: #ddebfa;
+    --color-card-header: #3f80c0;
+    --color-fonts: #1971c2;
+    --color-input: #fff;
+    --color-font-input: #000;
+
+    --color-border-focus: #e59700;
+    
+    
+    --color-high-green: #40c057;
+    --color-high-red: #e13737;
+    --color-font-green: #000;
+    --color-font-red: #fff;
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--color-principal-background);
+}
+
+input-counter,
+text-counter{
+    display: flex;
+    flex-direction: column;
+}
+
+:disabled{
+    filter: grayscale(.75);
+    cursor: not-allowed !important;
+}
+
+body[data-bd-dark]{
+    
+    --color-principal-background: #1e2833;
+    --color-background-card: #263240;
+    --color-card-header: #e59700;
+    --color-fonts: #fff;
+    --color-input: #3f80c0;
+    --color-font-input: #fff;
+
+    
+    --color-high-green: #1a68ff;
+    --color-font-green: #fff;
+    --color-high-red: #e59700;
+    --color-font-red: #000;
+
+    --color-border-focus: #ffc451;
+}
+
+
+::-webkit-scrollbar{
+    width: 7px;
+    height: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-card-header);
+    cursor: grab;
+    /* cursor: n-resize; */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb:active {
+    cursor: grabbing;
+    /* cursor: n-resize; */
+}
+
+.container{
+    padding: 10px;
+}
+
+.container-lg{
+    padding: 35px;
+}
+
+
+main{
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+
+    display: grid;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.card{
+    width: 100%;
+    padding: 15px;
+    background-color: var(--color-background-card);
+    border-radius: 10px;
+}
+
+.card-header{
+    position: relative;
+    top: -25px;
+    left: 25px;
+    width: max-content;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+
+    background-color: var(--color-card-header);
+    color: white;
+}
+
+.card-body{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 32px;
+    align-items: center;
+    
+
+}
+
+.input-group{
+    color: var(--color-fonts);
+}
+
+.input-group :is(input, textarea, select){
+    border-radius: 5px;
+    border: 1px solid var(--color-fonts);
+    padding: 7px;
+
+    background-color: var(--color-input);
+    color: var(--color-font-input);
+    width: 100%;
+
+}
+
+.input-group :is(input, textarea, select):focus{
+    outline: none;
+    border: 2px solid var(--color-border-focus);
+}
+
+.input-group :is(select, input[type=date]){
+    color: var(--color-fonts);
+    cursor: pointer;
+}
+
+:is(input, textarea)::placeholder{
+    color: var(--color-fonts);
+    opacity: .65;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.input-group textarea{
+    resize: none;
+    
+}
+
+
+.btn-group{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 25px;
+}
+
+.btn-group-label label{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    gap: 5%;
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border-radius: 10px;
+    
+    font-weight: bold;
+}
+
+.btn:hover:not(:disabled) {
+    color: white;
+}
+  
+.btn:active:not(:disabled) {
+    transform: scale(0.9);
+}
+
+.btn-success{        
+    color: var(--color-high-green);
+    border: 2px solid var(--color-high-green);
+    box-shadow: inset 0 0 0 0 var(--color-font-green);
+}
+.btn-success:hover:not(:disabled){
+    box-shadow: inset 0 -100px 0 0 var(--color-high-green);
+}
+
+.btn-danger{    
+    color: var(--color-high-red);
+    border: 2px solid var(--color-high-red);
+    box-shadow: inset 0 0 0 0 var(--color-font-red);
+}
+.btn-danger:hover:not(:disabled){
+    box-shadow: inset 0 -100px 0 0 var(--color-high-red);
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2px;
+}
+
+.input-container :is(span, label){
+    text-transform: uppercase;
+}
+
+::placeholder{
+    text-transform: capitalize;
+}
+
+
+.modal-search {
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+
+    display: grid;
+    gap: 15px;
+    padding: 25px;
+
+    border: 1px solid black;
+    border-radius: 10px;
+
+    background-color: #0064af;
+
+    table {
+        width: 100%;
+        text-align: center;
+        letter-spacing: 1px;
+        border-collapse: collapse;
+        user-select: none;
+    }
+
+    table thead {
+        background-color: var(--color-background-card);
+        color: var(--color-fonts);
+    }
+
+    tbody {
+        background-color: #fff;
+    }
+
+    tbody td {
+        border: 1px solid;
+        cursor: pointer;
+    }
+
+    tbody tr:hover {
+        background-color: #d8d8d8;
+    }
+
+    tbody tr[selected]{
+        background-color: var(--color-card-header);
+    }
+
+    .modal-header {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .modal-header label {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .modal-footer {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        gap: 10px;
+    }
+
+    button {
+        background-color: var(--color-background-card);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 7px;
+        color: var(--color-fonts);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    button:hover {
+        filter: brightness(85%);
+    }
+
+    button:active {
+        transform: scale(.95);
+    }
+
+    .input-group{
+        color: #fff;
+    }
+
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+
+    display: grid;
+    gap: 15px;
+    padding: 25px;
+
+    border: 1px solid black;
+    border-radius: 10px;
+
+    background-color: #0064af;
+}
+
+dialog:not([open]){
+    display: none;
+}
+
+dialog::backdrop{
+    backdrop-filter: blur(5px);
+}
